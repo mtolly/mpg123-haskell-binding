@@ -90,8 +90,8 @@ foreign import ccall unsafe "mpg123_param"
 foreign import ccall unsafe "mpg123_getparam"
   c_mpg123_getparam :: Mpg123_handle_ptr
                     -> CInt -- ^ enum mpg123_parms
-                    -> CLong
-                    -> CDouble
+                    -> Ptr CLong
+                    -> Ptr CDouble
                     -> IO CInt
 
 newtype Mpg123_feature_set = Mpg123_feature_set { mpg123_feature_set :: CInt }
@@ -216,7 +216,7 @@ newtype Mpg123_channelcount = Mpg123_channelcount { mpg123_channelcount :: CInt 
  , mpg123_stereo = MPG123_STEREO }
 
 foreign import ccall unsafe "mpg123_rates"
-  c_mpg123_rates :: Ptr (Ptr CLong) -> CSize -> IO ()
+  c_mpg123_rates :: Ptr (Ptr CLong) -> Ptr CSize -> IO ()
 
 foreign import ccall unsafe "mpg123_encodings"
   c_mpg123_encodings :: Ptr (Ptr CInt) -> Ptr CSize -> IO ()
