@@ -115,7 +115,7 @@ foreign import ccall unsafe "mpg123_feature"
   c_mpg123_feature :: CInt -- ^ enum mpg123_feature_set
                    -> IO CInt
 
-newtype Mpg123_errors = Mpg123_errors { mpg123_errors :: CInt }
+newtype Mpg123_errors = Mpg123_errors { mpg123_errors :: CInt } deriving (Eq)
 #{enum Mpg123_errors, Mpg123_errors
  , mpg123_done = MPG123_DONE
  , mpg123_new_format = MPG123_NEW_FORMAT
@@ -222,7 +222,7 @@ foreign import ccall unsafe "mpg123_encodings"
   c_mpg123_encodings :: Ptr (Ptr CInt) -> Ptr CSize -> IO ()
 
 foreign import ccall unsafe "mpg123_encsize"
-  c_mpg123_encsize :: CInt -> IO CInt
+  c_mpg123_encsize :: CInt -> CInt
 
 foreign import ccall unsafe "mpg123_format_none"
   c_mpg123_format_none :: Mpg123_handle_ptr -> IO CInt
