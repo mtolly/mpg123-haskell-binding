@@ -1,15 +1,14 @@
 name:                mpg123
 version:             0.1.0.0
-synopsis:            Bindings for libmpg123 (v 1.20.1)
--- description:
-license:             LGPL-2.1
+synopsis:            Bindings for libmpg123
+description:         Raw bindings for libmpg123 (v 1.20.1).
+license:             BSD3
 license-file:        LICENSE
 author:              Miroslav Puda
 maintainer:          pakanek@gmail.com
--- copyright:
+copyright:           Miroslav Puda (2017)
 category:            Codec
 build-type:          Simple
--- extra-source-files:
 cabal-version:       >=1.10
 
 library
