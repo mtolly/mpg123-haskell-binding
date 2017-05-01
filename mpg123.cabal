@@ -10,6 +10,7 @@ copyright:           Miroslav Puda (2017)
 category:            Codec
 build-type:          Simple
 cabal-version:       >=1.10
+homepage:            https://github.com/pakanek/mpg123-haskell-binding
 
 library
   exposed-modules:     Codec.Mpg123.Raw
