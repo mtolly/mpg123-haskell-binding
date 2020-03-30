@@ -430,8 +430,7 @@ newtype Mpg123_state = Mpg123_state { mpg123_state :: CInt }
 #{enum Mpg123_state, Mpg123_state
  , mpg123_accurate = MPG123_ACCURATE
  , mpg123_bufferfill = MPG123_BUFFERFILL
- , mpg123_frankenstein = MPG123_FRANKENSTEIN
- , mpg123_fresh_decoder = MPG123_FRESH_DECODER }
+ , mpg123_frankenstein = MPG123_FRANKENSTEIN }
 
 foreign import ccall unsafe "mpg123_getstate"
   c_mpg123_getstate :: Mpg123_handle_ptr
